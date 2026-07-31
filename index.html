@@ -80,26 +80,37 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 50px; 
+    gap: 30px; 
     list-style: none;
     margin: 0 auto; 
     padding: 0 40px;
 }
 
+/* UNIFIED PREMIUM LINKS DESIGN */
 .nav-links a {
     text-decoration: none;
-    color: var(--text-muted);
+    color: var(--accent-gold); /* Changes all links to your signature gold */
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     white-space: nowrap; 
+    
+    /* The Premium Dashed Box Frame Layout */
+    border: 1px dashed rgba(214, 175, 55, 0.3);
+    padding: 8px 18px;
+    border-radius: 2px;
+    
     transition: var(--transition);
 }
 
+/* Unified Hover State Response */
 .nav-links a:hover {
     color: var(--text-light);
+    background-color: rgba(214, 175, 55, 0.08);
+    border-color: var(--accent-gold);
 }
+
 
 .cta-button {
     text-decoration: none;
@@ -859,20 +870,6 @@ body:hover .dynamic-mouse-glow {
     padding-top: 120px !important;
 }
 
-/* The Download Link Accent Highlight */
-.download-nav-btn {
-    color: var(--accent-gold) !important;
-    font-weight: 600 !important;
-    border: 1px dashed rgba(214, 175, 55, 0.3);
-    padding: 6px 14px;
-    border-radius: 2px;
-}
-
-.download-nav-btn:hover {
-    background-color: rgba(214, 175, 55, 0.08);
-    border-color: var(--accent-gold);
-}
-
 /* 15. ABOUT ME NARRATIVE SECTION GRID LAYOUT */
 .about-narrative-section {
     background-color: var(--bg-dark);
@@ -952,8 +949,6 @@ body:hover .dynamic-mouse-glow {
     <li><a href="#achievements">Metrics</a></li>
     <li><a href="#projects">Showcases</a></li>
     <li><a href="#contact">Contact</a></li>
-    <!-- The Download Resume Toggle Button -->
-    <li><a href="resume.pdf" download="Moyomade_Ojo_Resume.pdf" class="download-nav-btn"> Download CV</a></li>
 </ul>
             <a href="mailto:ojomoyomade09@gmail.com" class="cta-button">Hire Me</a>
         </nav>
@@ -1235,7 +1230,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const mouseY = event.clientY;
 
             /* 
-               UPGRADED HIGH-INTENSITY RADIAL GRAPHIC:
+               HIGH-INTENSITY RADIAL GRAPHIC:
                Compresses the core to 600px for a more defined spotlight.
                Increases inner alpha opacity to 0.15 for high visibility.
             */
